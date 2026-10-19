@@ -3,7 +3,7 @@
 Aplikasi web sederhana berbasis **Node.js**, **Express.js**, dan **EJS** yang menampilkan katalog film dengan fitur filter genre, halaman detail item, serta formulir penambahan film baru. Project ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web (Tema B: Katalog Film).
 
 *YOUTUBE*
-=> 
+=> https://youtu.be/F7ohA2wbwDI
 ---
 
 ## 👤 Identitas Mahasiswa
