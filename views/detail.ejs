@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="detail-container">
+    <img src="<%= film.poster %>" alt="<%= film.title %>" class="detail-poster">
+    <div class="detail-info">
+        <h2><%= film.title %> (<%= film.year %>)</h2>
+        <p><strong>Genre:</strong> <%= film.genre %></p>
+        <p><strong>Sutradara:</strong> <%= film.director %></p>
+        <p><strong>Sinopsis:</strong> <%= film.synopsis %></p>
+        
+        <div class="action-buttons">
+            <% if (film.trailer) { %>
+                <a href="<%= film.trailer %>" target="_blank" class="btn-trailer">
+                    ▶ Tonton Trailer di YouTube
+                </a>
+            <% } %>
+            <a href="/" class="btn-back">← Kembali ke Katalog</a>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

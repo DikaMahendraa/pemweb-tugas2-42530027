@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+<div class="container" style="max-width: 600px;">
+    <h2>Tambah Film Baru</h2>
+    <form action="/tambah" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+            <label>Judul Film:</label>
+            <input type="text" name="title" required style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <div>
+            <label>Genre:</label>
+            <input type="text" name="genre" required style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <div>
+            <label>Sutradara:</label>
+            <input type="text" name="director" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <div>
+            <label>Tahun Rilis:</label>
+            <input type="number" name="year" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <div>
+            <label>Sinopsis:</label>
+            <textarea name="synopsis" rows="3" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;"></textarea>
+        </div>
+        <div>
+            <label>Path Gambar Poster (misal: /images/namagambar.jpg):</label>
+            <input type="text" name="poster" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <div>
+            <label>Link Trailer YouTube:</label>
+            <input type="text" name="trailer" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #374151; background: #1f2937; color: white;">
+        </div>
+        <button type="submit" class="btn-back" style="cursor: pointer; border: none; margin-top: 1rem;">Simpan Film</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<h2>Katalog Film Pilihan</h2>
+
+<div class="filter-menu">
+    <a href="/">Semua Genre</a>
+    <a href="/?genre=Sci-Fi">Sci-Fi</a>
+    <a href="/?genre=Action">Action</a>
+</div>
+
+<div class="movie-grid">
+    <% films.forEach(film => { %>
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="<%= film.poster %>" alt="<%= film.title %>" class="movie-poster">
+            </div>
+            <div class="movie-info">
+                <h3><a href="/item/<%= film.id %>"><%= film.title %></a></h3>
+                <p><strong>Genre:</strong> <%= film.genre %></p>
+                <p><strong>Tahun:</strong> <%= film.year %></p>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<%- include('partials/footer') %>

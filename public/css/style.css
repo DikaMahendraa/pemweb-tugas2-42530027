@@ -1,0 +1,255 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.2rem 2.5rem;
+    border-bottom: 1px solid #1f2937;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+header h1 a:hover {
+    transform: scale(1.03);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    min-height: 70vh;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.filter-menu {
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.filter-menu a {
+    background: #1f2937;
+    color: #9ca3af;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #374151;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filter-menu a:hover {
+    background: #38bdf8;
+    color: #0b0f19;
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.movie-card {
+    background: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+}
+
+.poster-wrapper {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background-color: #1e293b;
+}
+
+.movie-poster {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block;
+}
+
+.movie-info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.movie-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+}
+
+.movie-info h3 a {
+    color: #f8fafc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.movie-info h3 a:hover {
+    color: #38bdf8;
+}
+
+.movie-info p {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    margin: 0.2rem 0;
+}
+
+.detail-container {
+    display: flex;
+    gap: 2.5rem;
+    background: #111827;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #1f2937;
+    align-items: flex-start;
+}
+
+.detail-poster {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+.detail-info h2 {
+    margin-top: 0;
+    color: #f8fafc;
+}
+
+.detail-info p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0.8rem 0;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: #38bdf8;
+    color: #0b0f19;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-back:hover {
+    background: #0ea5e9;
+}
+
+footer {
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #1f2937;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .detail-poster {
+        width: 100%;
+        max-width: 260px;
+        height: 380px;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* Tombol Trailer YouTube */
+.btn-trailer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ff0000;
+    color: #ffffff;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.btn-trailer:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 0, 0, 0.5);
+}
+.btn-back {
+    margin-top: 0 !important;
+}
